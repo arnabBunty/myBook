@@ -1,0 +1,211 @@
+.main{
+    margin-top: 10%;
+  }
+  
+  .st0{fill:#e9ebee}
+  .st2{fill:#5d89af}
+  .st3{fill:#709abf}
+  .st4,.st6{
+    fill:#e9ebee;
+    stroke:#b3dcdf;
+    stroke-miterlimit:10
+  }
+  .st6{
+    stroke:#5d89af;
+    stroke-width:2
+  }
+  .st7,.st8,.st9{
+    stroke:#709abf;
+    stroke-miterlimit:10
+  }
+  
+  .st7{
+    stroke-width:5;
+    stroke-linecap:round;
+    fill:none
+  }
+  .st8,.st9{
+    fill:#fff
+  }
+  .st9{
+    fill:none
+  }
+ 
+    
+  .homebtn, .homebtn::after {
+    width: 380px;
+    height: 86px;
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+  }
+  
+  .homebtn::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'AVAILABLE NOW';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+  }
+  
+  .homebtn:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  #cloud1{
+    animation: cloud003 15s linear infinite;
+  }
+  
+  #cloud2{
+    animation: cloud002 25s linear infinite;
+  }
+  
+  #cloud3{
+    animation: cloud003 20s linear infinite;
+  }
+  
+  #cloud4{
+    animation: float 4s linear infinite;
+  }
+  
+  #cloud5{
+    animation: float 8s linear infinite;
+  }
+  
+  #cloud7{
+    animation: float 5s linear infinite;
+  }
+  
+  #tracks{
+    animation: slide 650ms linear infinite;
+  }
+  
+  #bumps{
+    animation: land 10000ms linear infinite;
+  }
+  
+  @keyframes jig {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(1px); }
+      100% { transform: translateY(0px); }
+  }
+  
+  #car-layers{
+    animation: jig 0.35s linear infinite;
+  }
+  
+  @keyframes land {
+      from { transform: translateX(0); }
+      to { transform: translateX(1000px); }
+  }
+  
+  
+  @keyframes slide {
+      from { transform: translateX(0px); }
+      to { transform: translateX(100px); }
+  }
+  
+  /* @keyframes cloudFloat {
+    0% { transform: translateX(0) translateY(3px); }
+    100% { transform: translateX(1000px) translateY(0); }
+  } */
+  
+  @keyframes cloud001 {
+    0% { transform: translateX(-1000px) translateY(3px); }
+    100% { transform: translateX(1000px) translateY(0); }
+  }
+  
+  @keyframes cloud002 {
+    0% { transform: translateX(-1000px) translateY(3px); }
+    100% { transform: translateX(1000px) translateY(0); }
+  }
+  
+  @keyframes cloud003 {
+    0% { transform: translateX(-1000px) translateY(3px); }
+    100% { transform: translateX(1000px) translateY(0); }
+  }
+  
+  @keyframes float {
+      0% { transform: translateY(0px) translateX(0); }
+      50% { transform: translateY(8px) translateX(5px); }
+      100% { transform: translateY(0px) translateX(0); }
+  }
+  
+  #bracefront, #braceback{
+    animation: braces 1s linear infinite;
+  }
+  
+  @keyframes braces {
+      0% { transform: translateX(-2px); }
+    25% { transform: translateX(3px); }
+      50% { transform: translateX(-2px); }
+      75% { transform: translateX(3px); }
+    100% { transform: translateX(-2px); }
+  }

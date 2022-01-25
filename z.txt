@@ -1,0 +1,2 @@
+<><HomeHeader/><div className="app__page"><LeftSideBar/><div className="app__posts">
+                              </div><RightSideBar/></div></>

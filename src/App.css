@@ -1,0 +1,23 @@
+body {
+  background-color: #e9ebee!important;
+}
+
+.app__page {
+  display: flex;
+}
+
+.app__posts {
+  display: flex;
+  justify-content: center;
+}
+
+.themebtn{
+  background-color: orange!important;
+  width: 164px;
+  margin-top: 10px!important;
+
+}
+
+.loading{
+  margin-top: 300px;
+}

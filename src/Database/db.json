@@ -1,0 +1,164 @@
+{
+    "person": 
+    [
+        {
+            "id": "61c310e887324f001550a49b",
+            "user_name": "Arnab Gupta",
+            "user_imgurl":"../../../Images/PrfPic/DSC_0605-22.jpg",
+            "user_cvr_imgurl":"../../../Images/CvrPic/wp2695144.jpeg",
+            "user_qualification":"MCA",
+            "user_bio":"I love making applications with React.",
+            "user_loc":"Howrah,West Bengal",
+            "posts": 
+            [
+                {
+                    "post_id": "001",
+                    "caption": "Hello Everyone..",
+                    "imgurl": "../../../Images/Post/WhatsApp Image 2021-09-09 at 9.55.25 PM.jpeg",
+                    "likes": 8,
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"Nice Pic...."
+                        },
+                        {
+                            "comment_person_name":"Arindam Chowdhury",
+                            "comment":"Ohhh ki lagche :)"
+                        },{
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Kothay re eta?"
+                        }
+                    ]
+                },
+                {
+                    "post_id": "002",
+                    "caption": "Its My new Bike ;)",
+                    "imgurl": "../../../Images/Post/_boxster_s.jpg",
+                    "likes": "7k",
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Swastik Banerjee",
+                            "comment":"Kobe nili vai????"
+                        },
+                        {
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Chol akdin ghure asi ;)"
+                        },
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"WOW!! Ki name re bike tar? Bol kobe berobi? "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "61ef28ffe8e34800156c5eca",
+            "user_name": "Shirshendu Kundu",
+            "user_imgurl":"../../../Images/PrfPic/",
+            "user_cvr_imgurl":"../../../Images/CvrPic/",
+            "user_qualification":"MCA",
+            "user_bio":"I love making applications with React.",
+            "user_loc":"Howrah,West Bengal",
+            "posts": 
+            [
+                {
+                    "post_id": "001",
+                    "caption": "Hey Everyone..",
+                    "imgurl": "../../../Images/Post/",
+                    "likes": 8,
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"Nice Pic...."
+                        },
+                        {
+                            "comment_person_name":"Arindam Chowdhury",
+                            "comment":"Ohhh ki lagche :)"
+                        },{
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Kothay re eta?"
+                        }
+                    ]
+                },
+                {
+                    "post_id": "002",
+                    "caption": "Its My new Bike ;)",
+                    "imgurl": "../../../Images/Post/",
+                    "likes": "7k",
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Swastik Banerjee",
+                            "comment":"Kobe nili vai????"
+                        },
+                        {
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Chol akdin ghure asi ;)"
+                        },
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"WOW!! Ki name re bike tar? Bol kobe berobi? "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "61ef2948e8e34800156c5ecb",
+            "user_name": "Arpita Paria",
+            "user_imgurl":"../../../Images/PrfPic/",
+            "user_cvr_imgurl":"../../../Images/CvrPic/",
+            "user_qualification":"MCA",
+            "user_bio":"I love making applications with React.",
+            "user_loc":"Howrah,West Bengal",
+            "posts": 
+            [
+                {
+                    "post_id": "001",
+                    "caption": "Hola Everyone..",
+                    "imgurl": "../../../Images/Post/",
+                    "likes": 8,
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"Nice Pic...."
+                        },
+                        {
+                            "comment_person_name":"Arindam Chowdhury",
+                            "comment":"Ohhh ki lagche :)"
+                        },{
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Kothay re eta?"
+                        }
+                    ]
+                },
+                {
+                    "post_id": "002",
+                    "caption": "Its My new Bike ;)",
+                    "imgurl": "../../../Images/Post/",
+                    "likes": "7k",
+                    "comments": 
+                    [
+                        {
+                            "comment_person_name":"Swastik Banerjee",
+                            "comment":"Kobe nili vai????"
+                        },
+                        {
+                            "comment_person_name":"Saptarshi Chatterjee",
+                            "comment":"Chol akdin ghure asi ;)"
+                        },
+                        {
+                            "comment_person_name":"Koyena Das",
+                            "comment":"WOW!! Ki name re bike tar? Bol kobe berobi? "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+  }
