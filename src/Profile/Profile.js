@@ -21,26 +21,26 @@ import Post from '../Posts/Post'
 import { useParams } from 'react-router'
 
 function Profile() {
-  const name=window.sessionStorage.Name;
   const id=useParams()
+  const name=window.sessionStorage.Name
   let user={};
   const user1=db.person.find(a=>a.id===id.id)
-  if(!user1){
-    user=db.person.find(a=>a.user_name==="Arnab Gupta")
-  }else{
+  if(user1){
     user=user1;
+  }else{
+    user=db.person.find(a=>a.user_name==="Arnab Gupta")
   }
-  
+  console.log(id,user.id);
   return <main>
   <div id="profile-upper">
     <div id="profile-banner-image">
-      <img className="prfimg"  src={user.user_cvr_imgurl} alt="Banner image"></img>
+      <img className="prfimg"  src={user.user_cvr_imgurl} alt="Banner image" />
     </div>
     <div id="profile-d">
       <div id="profile-pic">
         <img className="prfimg"  src={user.user_imgurl}></img>
       </div>
-      <div id="u-name">{user.user_name}</div>
+      <div id="u-name">{user1 ? user.user_name : name}</div>
       <div className="tb" id="m-btns">
         <div className="td">
           <div className="m-btn"><FormatListBulletedIcon/><span>Activity log</span></div>
@@ -160,7 +160,7 @@ function Profile() {
             <div id="insert_emoji"><InsertEmoticonIcon/></div>
           </div>
         </div>
-        <Post username={id.id}/>
+        <Post username={user1 ? id.id : user.id}/>
       </div>
       
     </div>

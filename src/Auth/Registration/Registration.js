@@ -26,24 +26,22 @@ function Registration() {
       switch (name) {
         case "fname":
           isErr.fname=
-          // value.length<4?"Atleast 4 character":" ";
           validateName.test(value)?" ":"Wrong First Name Input, first letter Uppercase and no numeric";
           break;
           case "lname":
           isErr.lname=
-          // value.length<4?"Atleast 4 character":" ";
           validateName.test(value)?" ":"Wrong Last Name Input, first letter Uppercase and no numeric";
           break;
           case "email":
           isErr.email=
-          // value.length<4?"Atleast 4 character":" ";
           validateEmail.test(value)?" ":"Wrong Input, Email pattern abc@defgh.i";
           break;
           case "pass":
           isErr.pass=
-          // value.length<6?"Atleast 6 character required":" ";
           validatePass.test(value)?" ":"Atleast 8 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
           break;
+          default:
+            break; 
       }
       setInputstate({...inputState,[name]:value,isError:isErr})
       console.log(inputState.isError.fname);
@@ -51,19 +49,15 @@ function Registration() {
 
     const submitHandler=(event)=>{
       event.preventDefault();
-      console.log("Input",inputState);
-      // let user= {first_name:inputState.fname,last_name:inputState.lname,utype:"User",email:inputState.email,phn:inputState.phn,pass:inputState.pass}
       let user= {username:inputState.fname+" "+inputState.lname,email:inputState.email,password:inputState.pass}
       axios.post('https://project-node-1.herokuapp.com/postUserData',user)
       .then(result=>{
-        console.log("Axios",result);
         alert("Successfully Added!!")
         navigate('/login')
       }).catch(err=>{
         console.log(err);
         alert("Error Occured")
       })
-      // https://project-api-arnab.herokuapp.com/signupValue
     }
 
     return (

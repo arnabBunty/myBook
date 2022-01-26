@@ -6,7 +6,7 @@ function LoginHeader() {
     return (
         <div className="header">
         <Link className="link" to="/">
-            <img className="header__logo" src="../../../Images/myBook.jpg" title='myBook'/>
+            <img className="header__logo" src="../../../Images/myBook.jpg" title='myBook' alt=''/>
         </Link>
         <Link className="link" to="/register">
             <button className="header__button">Create New Account</button>

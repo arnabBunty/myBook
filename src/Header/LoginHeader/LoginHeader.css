@@ -23,10 +23,10 @@
     background-color: #3683da;
     border: none;
     position: relative;
-    float: left;
+    float: right;
     display: flex;
-    margin-right: 770px;
-    margin-left: 750px;
+    margin-right: 70px;
+    /* margin-left: 750px; */
 }
 
 .header__button:hover {

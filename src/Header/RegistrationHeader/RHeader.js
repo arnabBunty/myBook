@@ -6,7 +6,7 @@ import './RHeader.css';
 
 function RHeader() {
     const navigate=useNavigate();
-    const [inputState,setInputstate]=useState()
+    const [inputState,setInputstate]=useState(" ")
       const handleChange=(event)=>{
         event.persist();
         let {name,value}=event.target;
@@ -42,7 +42,7 @@ function RHeader() {
 
                     <input className="header__input2" name='pass' type="password" placeholder="Password" onChange={handleChange}/>
 
-                    <button type="submit" className="header__submit">Log In</button>
+                    <button type="submit" className="header__submit" disabled={!inputState.pass || !inputState.email}>Log In</button>
                 </form>
             </div>
         </div>

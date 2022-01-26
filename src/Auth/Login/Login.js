@@ -5,7 +5,6 @@ import axios from 'axios';
 import {Link} from 'react-router-dom'
 
 
-const validatePass=RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,15})')
 const validateEmail=RegExp('^([a-z0-9.-]+)@([a-z]{5,12}).([a-z.]{2,10})$')
 
 function Login() {
@@ -26,8 +25,10 @@ function Login() {
             break;
             case "pass":
             isErr.pass=
-            value.length>4?" ":"Atleast 4 characters required";
+            value.length>=4?" ":"Atleast 4 characters required";
             break;
+            default:
+            break;  
         }
         setInputstate({...inputState,[name]:value,isError:isErr})
       }
@@ -38,7 +39,6 @@ function Login() {
     let user= {email:inputState.email,password:inputState.pass}
     axios.post('https://project-node-1.herokuapp.com/postLoginData',user)
     .then(result=>{
-      console.log("Axios",result);
       window.sessionStorage.setItem("Token",result.data.token)
       window.sessionStorage.setItem("Name",result.data.result.userName)
       window.sessionStorage.setItem("ID",result.data.result._id)
@@ -58,7 +58,7 @@ function Login() {
                 <h3>Log In To myBook</h3>
                 <form  onSubmit={submitHandler}>
                     <center>
-                        <input type="text" name='email' placeholder="Email Address" onChange={handleChange} />
+                        <input type="email" name='email' placeholder="Email Address" onChange={handleChange} />
                         <br></br>
       {inputState.isError.email.length>0 && (
         <span className='err'>{inputState.isError.email}</span>
@@ -72,7 +72,7 @@ function Login() {
       )}
                     </center>
                     <center>
-                        <button type="submit"  className="login__login" disabled={inputState.isError.pass.length>1 || inputState.isError.email.length>1 || !inputState.pass || !inputState.email}>Log In</button>
+                        <button type="submit"  className="login__login" disabled={!inputState.pass || !inputState.email || inputState.isError.pass.length>1 || inputState.isError.email.length>1}>Log In</button>
                     </center>
                     <center>
                         <h6>Forgotten Password</h6>

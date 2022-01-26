@@ -8,21 +8,29 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import RecommendIcon from '@mui/icons-material/Recommend';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import db from '../Database/db.json'
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 function Post(props) {
-    const name=window.sessionStorage.Name;
-    const [propsState,setPropsState]=useState(props.username)
-    console.log(props);
+    const [propsState]=useState(props.username)
+    const [show, setShow] = useState('like2');
+    const [show2, setShow2] = useState('textforlike');
+    const likeHandle = (event) => {
+        event.preventDefault();
+        if (show === 'like2') {
+            setShow('like2 blue');
+            setShow2('textforlike bluetextforlike')
+        } else {
+            setShow('like2');
+            setShow2('textforlike')
+        }
+    }
     return (
         <>
         {
             db.person.filter((username)=>{
-                if(!propsState){
+                if(username.id===propsState){
                     return username
-                  }else if(username.id.includes(propsState)){
-                    return username
-                  }
+                  }else return 
             }).map((user)=>(
                 user.posts.map((post)=>(
         <div className="post" key={post.post_id}>
@@ -41,24 +49,22 @@ function Post(props) {
 
             <h4 className="post__text">{post.caption}</h4>
 
-            <img src={post.imgurl} className="post__image" />
+            <img src={post.imgurl} className="post__image" alt='post image'/>
 
             <div className="post__likeandlove">
                 <i className="post__like"><RecommendIcon/></i>
                 <i className="post__heart"><FavoriteIcon/></i>
-                <p>
-                    {/* {noLikes}  */}
-                    {post.likes}</p>
+                <p>{post.likes}</p>
             </div>
 
             <hr />
 
             <div className="post__likeoptions">
                 <div className="like" 
-                // onClick={likeHandle}
+                onClick={likeHandle}
                 >
-                    <i className="like2"><ThumbUpIcon/></i>
-                    <h3 className="{show2}">Like</h3>
+                    <i className={show}><ThumbUpIcon/></i>
+                    <h3 className={show2}>Like</h3>
                 </div>
                 <div className="comment">
                     <i className="comment2"><CommentIcon/></i>
@@ -69,9 +75,7 @@ function Post(props) {
                     <h3>Share</h3>
                 </div>
             </div>
-            <form 
-            // onSubmit={postComment}
-            >
+            <form>
 
                 <div className="commentBox">
                     <Avatar
@@ -79,11 +83,8 @@ function Post(props) {
                         alt=""
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjLE9Ylr4f4BXaJfXkLC0YGydJDZVQoxK0Dg&usqp=CAU"
                     />
-                    <input className="commentInputBox" type="text" placeholder="Write a comment ... " 
-                    // onChange={(e) => setComment(e.target.value)} 
-                    />
+                    <input className="commentInputBox" type="text" placeholder="Write a comment ... "/>
                     <input type="submit" 
-                    // disabled={!comment} 
                     className="transparent__submit" />
                 </div>
                 <p className="pressEnterToPost">Press Enter to post</p>
